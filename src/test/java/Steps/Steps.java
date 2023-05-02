@@ -7,11 +7,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class Steps {
-	
-	// teste comentando 
-	// teste comentando 
-	// teste comentando 
-	
+
 	Metodos m = new Metodos();
 	Elementos e = new Elementos();
 
@@ -22,7 +18,7 @@ public class Steps {
 
 	@Given("^selecione o botao abrir nova conta$")
 	public void selecione_o_botao_abrir_nova_conta() throws Throwable {
-		m.click(e.getBtnPopUp() );
+		m.click(e.getBtnPopUp());
 		m.pausa(5000, "pausa para carregar o botão abrir conta");
 		m.click(e.getBtnAbrirConta());
 	}
@@ -53,34 +49,33 @@ public class Steps {
 	public void valido_o_texto_Falta_pouco() throws Throwable {
 		m.pausa(3000, "pausa para tirar print da tela");
 		String print = "evidencia banco original";
-		m.screnShoot("./evidencia/"+ print+ ".png" );
+		m.screnShoot("./evidencia/" + print + ".png");
 		m.pausa(3000, "pausa para tirar print da tela");
 		m.fecharNavegador("fechando o navegador");
 	}
-	
+
 	@When("^preencher o campo nome \"([^\"]*)\"$")
 	public void preencher_o_campo_nome(String nome) throws Throwable {
 		m.preencher(e.getCampoNome(), nome, "Preenchendo o campo Nome");
-		
-	  
+
 	}
+
 	@When("^preencher o campo telefone \"([^\"]*)\"$")
 	public void preencher_o_campo_telefone(String telefone) throws Throwable {
 		m.preencher(e.getCampoTelefone(), telefone, "Preenchendo o campo Telefone");
-	   
+
 	}
 
 	@When("^preencher o campo email \"([^\"]*)\"$")
 	public void preencher_o_campo_email(String email) throws Throwable {
 		m.preencher(e.getCampoEmail(), email, "Preenchendo o campo Email");
-	   
+
 	}
 
 	@When("^preencher o campo cpf \"([^\"]*)\"$")
 	public void preencher_o_campo_cpf(String cpf) throws Throwable {
 		m.preencher(e.getCampoCPF(), cpf, "Preenchendo o campo CPF");
-	   
-	}
 
+	}
 
 }
