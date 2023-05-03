@@ -13,8 +13,8 @@ Feature: Banco original
    When o usuario preencher o formulario 
    #When preencher o campo nome "<nome>"
    #When preencher o campo telefone "<telefone>"
-  # When preencher o campo email "<email>"
-  # When preencher o campo cpf "<cpf>"
+ 	 #When preencher o campo email "<email>"
+ 	 #When preencher o campo cpf "<cpf>"
    And selecionar o botao quero ser cliente 
    Then Valido o texto Falta pouco
    
